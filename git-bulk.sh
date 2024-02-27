@@ -119,7 +119,7 @@ function executBulkOp () {
       local leadingpath=${curdir#${actual}}
       echo "Current repository: ${leadingpath%/*}/${bldred}${curdir##*/}${reset}"
       guardedExecution
-      eval cd "\"$rwsdir\"" # back to origin location of last find command
+      eval cd "\"$actual\"" # back to origin location of last find command
     done 
   done 
 }
